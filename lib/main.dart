@@ -44,13 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.white,
+        color: Colors.white60,
         child: Column(
           children: <Widget>[
             Image(
                 image: AssetImage(
                     'images/dice.jpg'),
-                height:300),
+                height:500),
             Text("Shahzaib Ali Shah",style:TextStyle(fontSize: 20)),
             Text("SP17-BCS-068",style:TextStyle(fontSize: 20)),
             SizedBox(height: 10,),
