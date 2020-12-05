@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'package:sessional2/HomePage.dart';
 import 'HomePage.dart';
 
 
@@ -34,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Timer(
         Duration(seconds: 6),
             () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomePage())));
+            context, MaterialPageRoute(builder: (context) =>Page())));
   } //<- Creates an object that fetches an image.
   // var image = new Image(
   //     image: AssetImage(
@@ -58,19 +59,80 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-class QuizApp extends StatelessWidget {
+class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.amber,
-        body: SafeArea(
-            child: Text("Loading")
-          // Padding(
-          //   // padding: EdgeInsets.symmetric(horizontal: 10.0),
-          //   child: QuizPage(),
-          // ),
+      debugShowCheckedModeBanner: false,
+      home: DefaultTabController(
+        length: 2,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.amber, // status bar color
+            brightness: Brightness.light,
+            title: Text('Rolling Dice Game'),
+            bottom: TabBar(
+              tabs: [
+                Tab(text: "Levels"),
+                Tab(text: "Contact Us"),
+              ],
+            ),
+          ),
+          body: TabBarView(
+            children: [
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    RaisedButton(
+                      onPressed: () {
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=> HomePage()),);
+                      },
+                      textColor: Colors.white,
+                      padding: const EdgeInsets.all(0.0),
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF24D876),
+                              Color(0xFF1976D2),
+                              Color(0xFF24D876),
+                            ],
+                          ),
+                        ),
+                        padding: const EdgeInsets.all(10.0),
+                        child:
+                        const Text('Simple Level', style: TextStyle(fontSize: 20)),
+                      ),
+                    ),
+                    SizedBox(height: 5,),
+                    // SizedBox(height: 2,),
+                    RaisedButton(
+                      onPressed: () {
+                        // Navigator.push(context,MaterialPageRoute(builder: (context)=> HomePage()),);
+                      },
+                      textColor: Colors.white,
+                      padding: const EdgeInsets.all(0.0),
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: <Color>[
+                              Color(0xFF24D876),
+                              Color(0xFF1976D2),
+                              Color(0xFF24D876),
+                            ],
+                          ),
+                        ),
+                        padding: const EdgeInsets.all(10.0),
+                        child:
+                        const Text('Hard Level', style: TextStyle(fontSize: 20)),
+                      ),
+                    ),
+                  ],),
+              ),
+              Text('Contact Page (Later will be change)'),
+            ],
+          ),
         ),
       ),
     );
