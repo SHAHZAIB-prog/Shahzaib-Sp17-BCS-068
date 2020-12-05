@@ -1,9 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:sessional2/HomePage.dart';
 import 'package:sessional2/HardPage.dart';
-import 'HomePage.dart';
+import 'package:sessional2/homescreen.dart';
 
 
 void main() {
@@ -87,7 +86,7 @@ class Page extends StatelessWidget {
                   children: [
                     RaisedButton(
                       onPressed: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (context)=> HomePage()),);
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=> HomeScreen()),);
                       },
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(0.0),
@@ -110,7 +109,7 @@ class Page extends StatelessWidget {
                     // SizedBox(height: 2,),
                     RaisedButton(
                       onPressed: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (context)=> HardPage()),);
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=> Hardpage()),);
                       },
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(0.0),
