@@ -4,6 +4,8 @@ import 'dart:ui';
 import 'package:sessional2/HardPage.dart';
 import 'package:sessional2/homescreen.dart';
 
+import 'package:contactus/contactus.dart';
+
 
 void main() {
   runApp(SplashScreen());
@@ -51,6 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 image: AssetImage(
                     'images/dice.jpg'),
                 height:500),
+
+            Text("Rolling Dice GamE",style:TextStyle(fontSize: 40)),
             Text("Shahzaib Ali Shah",style:TextStyle(fontSize: 20)),
             Text("SP17-BCS-068",style:TextStyle(fontSize: 20)),
             SizedBox(height: 10,),
@@ -130,15 +134,17 @@ class Page extends StatelessWidget {
                     ),
                   ],),
               ),
-              Column(children: [
-                Text('Name:Shahzaib Ali Shah',style: TextStyle(fontSize: 20, color:Colors.indigo )),
-                SizedBox(height: 20,),
-                Text('Reg:SP17-BCS-068',style: TextStyle(fontSize: 20,color:Colors.indigo)),
-                SizedBox(height: 20,),
-                Text('Email:Shahzabii00@gmail.com',style: TextStyle(fontSize: 20,color:Colors.indigo)),
-                SizedBox(height: 20,),
-                Text('contact:03026935657',style: TextStyle(fontSize: 20,color:Colors.indigo)),
-              ],)
+              Column(
+                children: [
+                  ContactUs(
+                    logo: AssetImage('images/capture.jpg'),
+                    email: 'Shahzabii00@gmail.com',
+                    companyName: 'Shahzaib Ali Shah',
+                    phoneNumber: '+923026935657',
+                    githubUserName: 'SHAHZAIB-Prog',
+                  ),
+                ],
+              )
             ],
           ),
         ),
