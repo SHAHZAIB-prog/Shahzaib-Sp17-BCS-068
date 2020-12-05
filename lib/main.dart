@@ -131,7 +131,15 @@ class Page extends StatelessWidget {
                     ),
                   ],),
               ),
-              Text('Contact Page (Later will be change)'),
+              Column(children: [
+                Text('Name:Shahzaib Ali Shah',style: TextStyle(fontSize: 20, color:Colors.indigo )),
+                SizedBox(height: 20,),
+                Text('Reg:SP17-BCS-068',style: TextStyle(fontSize: 20,color:Colors.indigo)),
+                SizedBox(height: 20,),
+                Text('Email:Shahzabii00@gmail.com',style: TextStyle(fontSize: 20,color:Colors.indigo)),
+                SizedBox(height: 20,),
+                Text('contact:03026935657',style: TextStyle(fontSize: 20,color:Colors.indigo)),
+              ],)
             ],
           ),
         ),
