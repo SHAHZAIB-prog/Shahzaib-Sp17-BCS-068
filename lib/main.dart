@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'HomePage.dart';
 
 
 void main() {
@@ -33,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Timer(
         Duration(seconds: 6),
             () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => QuizApp())));
+            context, MaterialPageRoute(builder: (context) => HomePage())));
   } //<- Creates an object that fetches an image.
   // var image = new Image(
   //     image: AssetImage(
