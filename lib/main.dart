@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:sessional2/HomePage.dart';
+import 'package:sessional2/HardPage.dart';
 import 'HomePage.dart';
 
 
@@ -109,7 +110,7 @@ class Page extends StatelessWidget {
                     // SizedBox(height: 2,),
                     RaisedButton(
                       onPressed: () {
-                        // Navigator.push(context,MaterialPageRoute(builder: (context)=> HomePage()),);
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=> HardPage()),);
                       },
                       textColor: Colors.white,
                       padding: const EdgeInsets.all(0.0),
